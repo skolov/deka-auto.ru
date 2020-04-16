@@ -1,0 +1,295 @@
+.headSection{
+    background: rgb(0, 0, 0);
+    font-family: 'Oswald', sans-serif;
+    .logo{
+        width: 100%;
+        float: left;
+        background-color: #fff;
+        img{
+        width: inherit;
+        margin-bottom: -5px;
+        }
+    }
+    .menu{
+        display: none;
+        width: calc(100% - 555px);
+        height: 28px;
+        padding: 31px 0;
+        float: left;
+        justify-content: space-around;
+        li{
+            margin: 0 10px;
+            float: left;
+            display: block;
+            height: 28px;
+            line-height: 28px;
+            font-size: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            -webkit-transition: ease-out 0.2s;
+            -moz-transition: ease-out 0.2s;
+            -o-transition: ease-out 0.2s;
+            transition: ease-out 0.2s;
+            color: rgb(199, 199, 199);
+            &:hover{
+                color: rgb(255, 255, 255);
+            }
+            span{
+                width: 28px;
+                height: 28px;
+                display: block;
+                float: left;
+                margin: 0 5px;
+                -webkit-transition: ease-out 0.2s;
+                -moz-transition: ease-out 0.2s;
+                -o-transition: ease-out 0.2s;
+                transition: ease-out 0.2s;
+            }
+            &:hover span{
+                margin: -5px 5px 0;
+            }
+        }
+    }
+    .address{
+        width: 90%;
+        padding: 10px 5%;
+        float: right;
+        text-align: left;
+        font-weight: 500;
+        color: #fff;
+        font-size: 14px;
+    }
+    .mobilePre{
+        width: 100%;
+        height: 300px;
+        border-bottom: 1px solid rgba(255,255,255,.4);
+        border-top: 1px solid rgba(255,255,255,.4);
+        float: left;
+        position: relative;
+        .mobilePreWall{
+            width: 100%;
+            height: 300px;
+            background-image: url(/pixels.jpg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+            filter: contrast(.6);
+        }
+        h1{
+            width: 80%;
+            padding: 20px 10%;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 5px;
+            font-weight: 300;
+            z-index: 1;
+            position: relative;
+        }
+        .textAngry{
+            width: 90%;
+            padding: 5px 5%;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            float: left;
+            z-index: 1;
+            position: relative;
+        }
+        .buttonContainer{
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            float: left;
+            .button{
+                font-family: 'Rubik One', sans-serif;
+                font-size: 14px;
+                text-transform: uppercase;
+                background: rgba(0, 0, 0, 0.575);
+                display: table;
+                margin: 20px auto;
+                color: white;
+                border-radius: 5px;
+                padding: 10px;
+            }
+        }
+    }
+    .burger{
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.575);
+        border-radius: 25px;
+        position: fixed;
+        z-index: 100;
+        top: 10px;
+        right: 10px;
+        &::before{
+            width: 30px;
+            content: "menu";
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            height: 14px;
+            top: 14px;
+            margin: 3px 10px;
+            border-bottom: 2px solid #000;
+            border-top: 2px solid #000;
+            position: absolute;
+        }
+    }
+    .callButton{
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        background-image: url(/ico/callIco.png);
+        background-position: center;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.575);
+        position: fixed;
+        z-index: 100;
+        right: 15px;
+        top: 68px;
+    }
+    .mobileMenu{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .9);
+        position: fixed;
+        z-index: 101;
+        .close{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border-radius: 15px;
+            &::before, &::after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 23px;
+                width: 2px;
+                background-color: rgb(255, 255, 255);
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+        ul{
+            width: 100%;
+            margin-top: 100px;
+            float: left;
+            li{
+                margin: 10px 5%;
+                font-size: 16px;
+                display: table;
+                height: 28px;
+                line-height: 28px;
+                span{
+                    width: 28px;
+                    height: 28px;
+                    display: block;
+                    float: left;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .headSection{
+        .logo{
+            width: calc(100%);
+            float: none;
+            img{
+                width: calc(100%);
+            }
+        }
+        .menu{
+            display: flex;
+            padding: 0;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            justify-content: center;
+            li{
+                display: block;
+                padding: 6px 0;
+            }
+        }
+        .address{
+            width: auto;
+            float: left;
+            padding: 10px 20px;
+        }
+        .mobilePre, .burger, .callButton{
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .headSection{
+        height: 180px;
+        width: 1080px;
+        margin: 0 auto;
+        .logo{
+            width: 555px;
+            height: 180px;
+            float: left;
+            img{
+                width: 555px;
+            }
+        }
+        .menu{
+            display: flex;
+            justify-content: space-around;
+            width: 525px;
+            height: 28px;
+            padding: 25px 0;
+            margin-top: 0;
+            li span{
+                display: block;
+            }
+        }
+        .address{
+            width: auto;
+            padding: 5px 20px;
+            float: right;
+        }
+        .mobilePre, .burger, .callButton{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .headSection{
+        width: 100%;
+        .menu{
+            padding: 60px 0;
+            width: calc(100% - 960px);
+        }
+        .infoBoard{
+            width: 404px;
+            height: 180px;
+            float: right;
+            border-left: 1px solid rgba(255,255,255,.3);
+            .address{
+                padding: 40px 20px;
+            }
+        }
+    }
+}

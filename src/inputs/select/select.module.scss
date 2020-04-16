@@ -1,0 +1,16 @@
+.select{
+    width: 100%;
+    font-size: 12px;
+    select{
+        display: block;
+        width: 100%; /* от ширины блока div */
+        padding: 5px;/* отступы от текста до рамки */
+        background: none; /* убираем фон */
+        border: 1px solid #ccc; /* рамка */
+        border-radius: 3px;/* скругление полей формы */
+        font-size: 12px;
+        color: #444;
+        outline: none;
+        
+    }
+}

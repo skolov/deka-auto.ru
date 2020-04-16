@@ -1,0 +1,160 @@
+.service{
+    font-family: 'Oswald', sans-serif;
+    .mainThree{
+        width: 100%;
+        float: left;
+        .oneItem{
+            width: calc(100% - 60px);
+            margin: 10px 30px;
+            background: #fff;
+            float: left;
+            position: relative;
+            border-bottom: 20px solid #fff;
+            h1{
+                width: 100%;
+                color: #333;
+                font-weight: 400;
+                font-size: 18px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .price{
+                width: 100%;
+                height: 50px;
+                background: rgb(20, 20, 26);
+                margin-top: 20px;
+                text-align: center;
+                color: #fff;
+                line-height: 50px;
+                font-size: 20px;
+            }
+        }
+    }
+    .moreElse{
+        width: 92%;
+        margin-bottom: 40px;
+        float: left;
+        padding: 0 4%;
+        .moreItem{
+            width: 100%;
+            margin: 5px 0px;
+            color: #fff;
+            position: relative;
+            display: table;
+            float: left;
+            background-image: url(/ico/dot.png);
+            background-repeat: repeat-x;
+            background-position: bottom;
+            p{
+                float: left;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0 0 1px 0;
+                padding: 5px 5px 0 5px;
+                max-width: 60%;
+                background: rgb(30, 30, 40);
+            }
+            .price{
+                float: right;
+                position: relative;
+                height: inherit;
+                padding: 0 10px;
+                color: #fff;
+                background: rgb(20, 20, 30);
+                min-height: 30px;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 481px) {
+    .service{
+        .mainThree{
+            .oneItem{
+                display: block;
+                width: 240px;
+                float: none;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 769px) {
+    .service{
+        .mainThree{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .oneItem{
+                width: 240px;
+                &::before{
+                    content: ''; 
+                    position: absolute;
+                    left: 0px; top: -170px;
+                    border: 120px solid transparent;
+                    border-bottom: 50px solid rgb(255, 255, 255);
+                }
+    
+                &::after{
+                    content: ''; 
+                    position: absolute;
+                    left: 110px; top: -40px;
+                    width: 20px;
+                    border-radius: 10px;
+                    height: 20px;
+                    background: rgb(30, 30, 40);
+                }
+            }
+            .oneItem:nth-child(2n){
+                margin-top: 120px;
+            }
+        }
+        .moreElse{
+            width: 980px;
+            padding: 0 50px;
+            margin-bottom: 40px;
+            float: left;
+            .moreItem{
+                width: 100%;
+                margin: 5px 0px;
+                color: #fff;
+                position: relative;
+                display: table;
+                float: left;
+                p{
+                    font-size: 18px;
+                }
+                .price{
+                    &::after {
+                        content: ' ';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        right: 0px;
+                        top: 100%;
+                        border-width: 5px 10px;
+                        border-style: solid;
+                        border-color: rgb(5, 5, 15) rgb(5, 5, 15) transparent transparent;
+                    }
+                    &:before {
+                        content: ' ';
+                        position: absolute;
+                        width: 10px;
+                        height: 0;
+                        right: -30px;
+                        top: 12px;
+                        border-width: 15px 10px;
+                        border-style: solid;
+                        border-color: rgb(20, 20, 30) transparent rgb(20, 20, 30) rgb(20, 20, 30);
+                    }
+                }
+            }
+        }
+    }
+}

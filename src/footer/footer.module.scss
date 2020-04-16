@@ -1,0 +1,107 @@
+.footer{
+    background: #000000;
+    font-family: 'Oswald', sans-serif;
+    .ingoContainer{
+        width: 100%;
+        float: left;
+    }
+    .headItem{
+        color: red;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .addInfo, .dekaService, .sideResurces, .siteMap, .timesJob{
+        width: 90%;
+        padding: 0 5%;
+        height: inherit;
+        float: left;
+        font-size: 12px;
+        color: #c7c7c7;
+        text-align: left;
+    }
+    .siteMap{
+        ul{
+            li{
+                width: inherit;
+                display: block;
+                margin: 4px 0;
+                -webkit-transition: ease-out 0.2s;
+                -moz-transition: ease-out 0.2s;
+                -o-transition: ease-out 0.2s;
+                transition: ease-out 0.2s;
+                color: #c7c7c7;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .timesJob{
+        .days{
+            float: left;
+            margin-right: 5px;
+        }
+    }
+    .dekaService{
+        margin-top: 20px;
+        h1{
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+    .sideResurces{
+        position: relative;
+        .flexContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        span{
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+            margin: 5px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .footer{
+        height: 200px;
+        .ingoContainer{
+            width: inherit;
+            position: absolute;
+        }
+        .headItem{
+            margin-top: 0;
+        }
+        .addInfo, .dekaService, .sideResurces, .siteMap, .timesJob{
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .siteMap{
+            width: 150px;
+        }
+        .addInfo{
+            width: 250px;
+        }
+        .timesJob{
+            width: 200px;
+        }
+        .dekaService{
+            width: 330px;
+            margin-top: 0;
+        }
+        .sideResurces{
+            width: 150px;
+        }
+    }
+}

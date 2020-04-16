@@ -1,0 +1,85 @@
+.reservMaker{
+    width: 1000px;
+    box-shadow: 0 1px 20px 0px rgba(0,0,0,.6);
+    margin: 10px 0;
+    padding: 10px 0;
+    float: left;
+    border-radius: 10px;
+    .head{
+        width: 1000px;
+        float: left;
+        margin: 10px 0;
+        font-size: 12px;
+        color: #000;
+        font-weight: bold;
+        .number{
+            width: 40px;
+            float: left;
+            text-align: center;
+        }
+        .name{
+            width: 150px;
+            float: left;
+        }
+        .mail{
+            width: 200px;
+            float: left;
+        }
+        .phone{
+            width: 110px;
+            float: left;
+        }
+        .about{
+            width: 280px;
+            float: left;
+        }
+        .auto{
+            width: 160px;
+            float: left;
+        }
+    }
+    .oneItem{
+        width: 1000px;
+        float: left;
+        margin: 10px 0;
+        border-bottom: 1px solid #666;
+        color: #000;
+        font-size: 12px;
+        .number{
+            width: 40px;
+            float: left;
+            text-align: center;
+        }
+        .name{
+            width: 150px;
+            float: left;
+        }
+        .mail{
+            width: 200px;
+            float: left;
+        }
+        .phone{
+            width: 110px;
+            float: left;
+        }
+        .about{
+            width: 280px;
+            float: left;
+        }
+        .auto{
+            width: 160px;
+            float: left;
+        }
+        .delete, .edit{
+            height: 20px;
+            color: #000;
+            margin-right: 10px;
+            float: left;
+            font-size: 10px;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

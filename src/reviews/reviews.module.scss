@@ -1,0 +1,324 @@
+.reviews{
+    width: 100%;
+    .formsContainer{
+        width: 100%;
+        height: inherit;
+        position: relative;
+        float: left;
+        h1{
+            width: calc(100% - 40px);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            &::after, &::before{
+                display: none;
+            }
+        }
+        img{
+            display: none;
+        }
+        .formCommentContainer{
+            width: 100%;
+            float: left;
+            z-index: 2;
+            position: relative;
+            .formComment{
+                width: 100%;
+                height: 470px;
+                position: relative;
+                background: #fff;
+                font-family: 'Oswald', sans-serif;
+                .reviewed{
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    div{
+                        text-align: center;
+                        font-size: 14px;
+                        p{
+                            padding: 0 20px;
+                        }
+                    }
+                }
+                .formBody{
+                    float: left;
+                    .textContainer{
+                        width: calc(100% - 64px);
+                        float: left;
+                        margin: 20px 32px;
+                        color: rgb(51, 51, 51);
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                    .textPale{
+                        width: calc(100% - 64px);
+                        float: left;
+                        margin: 5px 0;
+                        color: rgb(130, 130, 130);
+                        text-align: left;
+                        font: 400 13.3333px Arial;
+                    }
+                    .inputContainer{
+                        width: calc(100% - 60px);
+                        margin: 0 30px;
+                        float: left;
+                        position: relative;
+                        input, textarea{
+                            background: none;
+                            border-bottom: 1px solid #000;
+                        }
+                        textarea{
+                            border: 1px solid #000;
+                        }
+                    }
+                }
+                .formFooter{
+                    float: left;
+                    width: 100%;
+                    height: 96px;
+                    .button{
+                        padding: 8px 10px;
+                        font-size: 14px;
+                        background: #000;
+                        color: #fff;
+                        width: 60px;
+                        text-align: center;
+                        margin: 10px 10px 10px 0;
+                        cursor: pointer;
+                        -webkit-transition: ease-out 0.1s;
+                        -moz-transition: ease-out 0.1s;
+                        -o-transition: ease-out 0.1s;
+                        transition: ease-out 0.1s;
+                        &:hover{
+                            box-shadow: 0 1px 6px 0 rgba(0,0,0,.5);
+                        }
+                    }
+                }
+            }
+        }
+        .svgTry{
+            position: absolute;
+            right: 0;
+            z-index: 0;
+            margin-right: 7px;
+        }
+    }
+
+    .commentsContainer{
+        width: 100%;
+        height: inherit;
+        float: right;
+        background: rgb(30,30,40);
+        overflow: hidden;
+        .comark{
+            float: left;
+            margin: 0 30px 10px 30px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 28px;
+            color: red;
+            background-color: #fff;
+        }
+        .whiteBacking{
+            float: left;
+            border-radius: 4px 4px 4px 0;
+            overflow: hidden;
+            .contain{
+                width: 100%;
+                float: left;
+                &::-webkit-scrollbar { 
+                    width: 3px; 
+                }
+                &::-webkit-scrollbar-button {  
+                    display: none; 
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: #000;
+                }
+                &::-webkit-scrollbar-track-piece {
+                    background-color: rgb(71, 0, 0);
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: red;
+                    border-radius: 3px;
+                }
+                &::-webkit-scrollbar-corner {
+                    background-color: #000;
+                }
+                .oneItem{
+                    width: 90%;
+                    margin: 6px 5%;
+                    float: left;
+                    position: relative;
+                    overflow: hidden;
+                    color: #fff ;
+                    &::before{
+                        height: 100%;
+                        position: absolute;
+                        content: "";
+                        background: rgb(30,40,60);
+                    }
+                    &::before{
+                        left: 0;
+                    }
+                    .content{
+                        width: calc(90% - 2px);
+                        padding: 10px 5%;
+                        float: right;
+                        border: 1px solid;
+                        border-image: linear-gradient(30deg, #ff0000 38%, rgb(30,30,40) 65%);
+                        border-image-slice: 1;
+                        .mark{
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+                        .time{
+                            width: inherit;
+                            font-size: 12px;
+                        }
+                        .text{
+                            width: inherit;
+                            font-size: 12px;
+                            padding-top: 10px;
+                        }
+                    }
+                    .answer{
+                        padding: 10px;
+                        background: #fff;
+                        font-size: 12px;
+                        color: #000;
+                        float: right;
+                        border-radius: 3px;
+                        margin-top: -10px;
+                        max-width: 70%;
+                    }
+                    .answer .author, .content .author{
+                        width: inherit;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    h1{
+        width: calc(100% - 40px);
+        margin: 39px 0;
+        padding: 0 20px;
+        color: #fff;
+        font-size: 22px;
+        position: relative;
+        float: left;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        &::after, &::before{
+            display: none;
+            content: "";
+            width: 80px;
+            height: 20px;
+            position: absolute;
+        }
+        &::after{
+            border-bottom: 1px solid red;
+            border-right: 1px solid red;
+            right: 0px;
+            bottom: 20px;
+        }
+        &::before{
+            border-top: 1px solid red;
+            border-left: 1px solid red;
+            left: 0px;
+            top: 20px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 481px) {
+    .reviews{
+        .formsContainer{
+            .formCommentContainer{
+                .formComment{
+                    width: calc(100% - 160px);
+                    padding: 10px 80px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .reviews{
+        height: 640px;
+        .formsContainer{
+            width: 540px;
+            img{
+                display: block;
+            }
+            h1{
+                width: auto;
+                &::after, &::before{
+                    display: block;
+                }
+            }
+            .formCommentContainer{
+                width: 382px;
+                height: 460px;
+                border-right: 7px solid rgb(30, 30, 40);
+                .formComment{
+                    width: 382px;
+                    padding: 0;
+                    height: 460px;
+                }
+            }
+        }
+
+        .commentsContainer{
+            width: 540px;
+            float: left;
+            .comark{
+                margin: 30px;
+                font-size: 28px;
+            }
+            .whiteBacking{
+                .contain{
+                    width: 540px;
+                    height: 500px;
+                    overflow: auto;
+                    .oneItem{
+                        width: 536px;
+                        margin: 6px 0;
+                        position: relative;
+                        .content{
+                            width: 426px;
+                            padding: 10px 10px 10px 20px;
+                            float: left;
+                            .mark{
+                                font-size: 18px;
+                            }
+                        }
+                        .answer{
+                            margin-right: 50px;
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+        h1{
+            width: auto;
+            &::after, &::before{
+                display: block;
+            }
+            &::before{
+                top: -10px;
+                left: 0;
+            }
+            &::after{
+                right: 0;
+                bottom: -10px;
+            }
+        }
+    }
+}
